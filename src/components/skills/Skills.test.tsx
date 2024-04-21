@@ -7,8 +7,8 @@ describe("Skills",()=>{
 
         test("renders correctly",()=>{
             render(<Skills skillsList={skills} />)
-            const listEl = screen.getByRole("list")
-            expect(listEl).toBeInTheDocument()
+            const listEl = screen.getAllByRole("listitem")
+            expect(listEl).toHaveLength(skills.length)
         })
     })
 
